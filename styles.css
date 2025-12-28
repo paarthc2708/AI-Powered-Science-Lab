@@ -1,4 +1,4 @@
-.welcomePage{
+.welcomePageCard{
     background-image: URL("BackgroundImage.png");
     background-size: cover;
     height: 100vh;
@@ -12,6 +12,7 @@
     color: white;
     font-size: 40px;
     font-family: "Playfair Display", serif;
+    margin: 0;
 }
 .welcomePageMainHeading span{
     color: #FFD700;
@@ -22,15 +23,54 @@
     font-family: "Playfair Display", serif;
 }
 .welcomePageEnterLabButton{
-    width: 180px;
-    height: 50px;
+    width: 200px;
+    height: 45px;
     cursor: pointer;
     font-size: 20px;
     font-family: "Playfair Display", serif;
     background-color: grey;
     border: none;
-    border-radius: 40px;
+    border-radius: 12px;
 }
 .welcomePageEnterLabButton:hover{
     border: 4px solid #FFD700;
+}
+.advantagesSection{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+.advantagesSectionHeading{
+    text-align: center;
+    font-size: 30px;
+    font-family: "Playfair Display", serif;
+}
+.advantages{
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    gap: 20px;
+    justify-items: center;
+}
+.advantage, .step{
+    border: 2px solid black;
+    border-radius: 12px;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    width: 80%;
+}
+.howItWorksSection{
+    margin-bottom: 50px;
+    padding: 20px;
+}
+.howItWorksSectionHeading{
+    text-align: center;
+    font-size: 30px;
+    font-family: "Playfair Display", serif;
+}
+.steps{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    gap: 20px;
+    justify-items: center;
 }
