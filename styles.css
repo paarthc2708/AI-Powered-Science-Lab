@@ -1,0 +1,36 @@
+.welcomePage{
+    background-image: URL("BackgroundImage.png");
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.welcomePageMainHeading{
+    color: white;
+    font-size: 40px;
+    font-family: "Playfair Display", serif;
+}
+.welcomePageMainHeading span{
+    color: #FFD700;
+}
+.welcomePageSubHeading{
+    color: white;
+    font-size: 20px;
+    font-family: "Playfair Display", serif;
+}
+.welcomePageEnterLabButton{
+    width: 180px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Playfair Display", serif;
+    background-color: grey;
+    border: none;
+    border-radius: 40px;
+}
+.welcomePageEnterLabButton:hover{
+    border: 4px solid #FFD700;
+}
