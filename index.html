@@ -9,7 +9,7 @@
             <div class="welcomePageCard">
                 <h1 class="welcomePageMainHeading">AI-Powered Virtual <span>Chemistry Lab</span></h1>
                 <p class="welcomePageSubHeading">Perform chemistry experiments safely in a virtual environment with real-time AI guidance.</p>
-                <button id="enterLabButton" class="welcomePageEnterLabButton" onclick="enterLab()">Enter Lab</button>
+                <button id="enterLabButton" class="welcomePageEnterLabButton" onclick="enterLab()">Enter the Lab</button>
             </div>
             <div class="advantagesSection">
                 <h2 class="advantagesSectionHeading">Why Choose Our AI-Powered Lab?</h2>
@@ -47,6 +47,45 @@
             </div>
         </div>
         <div id="experimentsSection" class="experimentsSection">
+            <div class="experimentsSectionCard">
+                <h1 class="experimentsSectionHeading">Choose How You Want to Experiment</h1>
+                <div class="differentWays">
+                    <div class="guidedExperiments">
+                        <h3 class="guidedExperimentsHeading">Guided Experiments</h3>
+                        <p class="guidedExperimentsDescription">Follow structured experiments with AI assistance.</p>
+                        <button class="guidedExperimentsButton" onclick="startGuidedExperiments()">Start Guided Experiment</button>
+                    </div>
+                    <div class="startFromScratch">
+                        <h3 class="startFromScratchHeading">From Scratch</h3>
+                        <p class="startFromScratchDescription">Design and conduct your own experiments with AI support.</p>
+                        <button class="startFromScratchButton" onclick="startFromScratch()">Start From Scratch</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="guidedExperimentsSection" id="guidedExperimentsSection">
+            <div class="guidedExperimentsContent">
+                <h1 class="guidedExperimentsContentMainHeading">Guided Experiments</h1>
+                <p class="guidedExperimentsContentDescription">Perform structured chemistry experiments with real-time AI guidance.</p>
+                <div class="guidedExperimentsCards">
+                    <div class="guidedExperimentsCard">
+                        <h3 class="experimentTitle">Acid-Base Titration</h3>
+                        <p class="experimentDescription">Determine the concentration of an acid using a base.</p>
+                        <img src="" />
+                        <p class="experimentDetails"><i class="fa-solid fa-flask"></i>Beginner | <i class="fa-regular fa-clock"></i>5-7 minutes</p>
+                        <button class="startExperimentButton" onclick="startTitrationExperiment()">Start Experiment</button>
+                    </div>
+                    <div class="guidedExperimentsCard">
+                        <h3 class="experimentTitle">Precipitation Reaction</h3>
+                        <p class="experimentDescription">Observe formation of an insoluble salt.</p>
+                        <img src="" />
+                        <p class="experimentDetails"><i class="fa-solid fa-flask"></i>Beginner | <i class="fa-regular fa-clock"></i>3-5 minutes</p>
+                        <button class="startExperimentButton" onclick="startPrecipitationExperiment()">Start Experiment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fromScratchSection" id="fromScratchSection">
 
         </div>
         <script src="https://kit.fontawesome.com/1d3d3c5b95.js" crossorigin="anonymous"></script>
