@@ -189,9 +189,9 @@
     font-size: 14px;
     margin-bottom: 15px;
 }
-.startExperimentButton{
-    width: 150px;
-    height: 35px;
+.exploreExperimentButton{
+    width: 200px;
+    height: 40px;
     cursor: pointer;
     font-size: 16px;
     font-family: "Playfair Display", serif;
@@ -200,6 +200,15 @@
     border: none;
     border-radius: 12px;
 }
-.startExperimentButton:hover{
+.exploreExperimentButton:hover{
     border: 4px solid #FFD700;
+}
+.titrationExperiment, .precipitationExperiment, .pHExperiment{
+    display: none;
+    background-image: URL("BackgroundImage.png");
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    color: white;
+    font-family: "Playfair Display", serif;
 }
