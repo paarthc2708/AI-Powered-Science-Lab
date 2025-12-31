@@ -212,3 +212,65 @@
     color: white;
     font-family: "Playfair Display", serif;
 }
+.titrationExperimentHeading, .precipitationExperimentHeading, .pHExperimentHeading{
+    text-align: center;
+    font-size: 30px;
+    margin: 20px;
+    padding: 15px;
+}
+.titrationExperimentCard, .precipitationExperimentCard, .pHExperimentCard{
+    margin: auto;
+    width: 80%;
+    border: 2px solid white;
+    background-color: rgb(101, 101, 101);
+    opacity: 90%;
+    border-radius: 12px;
+    padding: 20px;
+}
+.titrationExperimentCardTop, .precipitationExperimentCardTop, .pHExperimentCardTop{
+    border-bottom: #FFD700 2px solid;
+}
+.titrationExperimentCardSubtitleHeading, .precipitationExperimentCardSubtitleHeading, .pHExperimentCardSubtitleHeading{
+    margin-top: 15px;
+}
+.titrationExperimentCardSubtitleDescription, .precipitationExperimentCardSubtitleDescription, .pHExperimentCardSubtitleDescription{
+    margin-top: 10px;
+}
+.titrationExperimentCardSubtitles, .precipitationExperimentCardSubtitles, .pHExperimentCardSubtitles{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 10px;
+}
+.titrationExperimentCardSubtitle, .precipitationExperimentCardSubtitle, .pHExperimentCardSubtitle{
+    width: 50%;
+}
+.startExperimentButton{
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "Playfair Display", serif;
+    background-color: grey;
+    color: black;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+.startExperimentButton:hover{
+    border: 4px solid #FFD700;
+}
+.backToGuidedExperimentsLink{
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.backToGuidedExperimentsLink:hover{
+    text-decoration: underline;
+}
+.titrationExperimentButtons, .precipitationExperimentButtons, .pHExperimentButtons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
