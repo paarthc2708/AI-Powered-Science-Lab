@@ -58,5 +58,8 @@ function backToExperiments(){
     titrationExperiment.style.display = "none";
     precipitationExperiment.style.display = "none";
     pHExperiment.style.display = "none";
+    titrationExperimentVirtualLab.style.display = "none";
+    precipitationExperimentVirtualLab.style.display = "none";
+    pHExperimentVirtualLab.style.display = "none";
     guidedExperimentsSection.style.display = "block";
 }

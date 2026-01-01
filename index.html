@@ -266,6 +266,37 @@
             </div>
         </div>
         <div class="titrationExperimentVirtualLab" id="titrationExperimentVirtualLab">
+            <div class="virtualLabHeader">
+                <h2 class="virtualLabTitle">Acid-Base Titration Experiment</h2>
+                <a href="#" onclick="backToExperiments()" class="backToGuidedExperimentsLink"><i class="fa-solid fa-arrow-left"></i>Back to Experiments</a>
+            </div>
+            <div class="virtualLabMainArea" id="titrationVirtualLabMainArea">
+                <div class="virtualLabLeftPanel">
+                    <div class="virtualLabLeftPanelChemicals">
+                        <h3 class="virtualLabPanelHeading">Chemicals</h3>
+                        <button class="chemicalButton" onclick="addAcid()"><img src="Icons/Acid.png" class="chemicalImage" /><br />Acid</button>
+                        <button class="chemicalButton" onclick="addBase()"><img src="Icons/Base.png" class="chemicalImage" /><br />Base</button>
+                        <button class="chemicalButton" onclick="addIndicator()"><img src="Icons/Indicator.png" class="chemicalImage" /><br />Indicator</button>
+                    </div>
+                    <div class="virtualLabLeftPanelApparatus">
+                        <h3 class="virtualLabPanelHeading">Apparatus</h3>
+                        <button class="chemicalButton" onclick="addBurette()"><img src="Icons/Burette.png" class="chemicalImage" /><br />Burette</button>
+                        <button class="chemicalButton" onclick="addDropper()"><img src="Icons/Dropper.png" class="chemicalImage" /><br />Dropper</button>
+                        <button class="chemicalButton" onclick="addConicalFlask()"><img src="Icons/Conical Flask.png" class="chemicalImage" /><br />Conical Flask</button>
+                    </div>
+                </div>
+                <div class="virtualLabCenterPanel">
+                    
+                </div>
+                <div class="virtualLabRightPanel">
+                    <h3 class="virtualLabPanelHeading">AI Assistant</h3>
+                    <div class="aiAssistantChatBox" id="aiAssistantChatBox">
+                        <div class="aiMessage">
+                            <p>Hello! I'm your AI lab assistant. Let's get started with the titration experiment. Please add the acid to the conical flask first.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="precipitationExperimentVirtualLab" id="precipitationExperimentVirtualLab">
         </div>
@@ -276,5 +307,6 @@
         </div>
         <script src="https://kit.fontawesome.com/1d3d3c5b95.js" crossorigin="anonymous"></script>
         <script src="sectionHiding.js"></script>
+        <script src="virtualLab.js"></script>
     </body>
 </html>
