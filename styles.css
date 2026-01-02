@@ -97,7 +97,7 @@
     justify-content: center;
     gap: 50px;
 }
-.guidedExperiments, .startFromScratch, .goToHomeButton{
+.guidedExperiments, .startFromScratch{
     border: 2px solid white;
     background-color: rgb(101, 101, 101);
     opacity: 90%;
@@ -106,9 +106,11 @@
     width: 300px;
     text-align: center;
     margin: 15px 0;
+    transition: transform 0.3s, border 0.3s;
 }
-.guidedExperiments:hover, .startFromScratch:hover, .goToHomeButton:hover{
+.guidedExperiments:hover, .startFromScratch:hover{
     border: 4px solid #FFD700;
+    transform: scale(1.1);
 }
 .guidedExperimentsHeading, .startFromScratchHeading{
     font-size: 24px;
@@ -117,7 +119,7 @@
 .guidedExperimentsDescription, .startFromScratchDescription{
     font-size: 18px;
 }
-.guidedExperimentsButton, .startFromScratchButton{
+.guidedExperimentsButton, .startFromScratchButton, .goToHomeButton{
     width: 200px;
     height: 40px;
     cursor: pointer;
@@ -128,7 +130,7 @@
     border: none;
     border-radius: 12px;
 }
-.guidedExperimentsButton:hover, .startFromScratchButton:hover{
+.guidedExperimentsButton:hover, .startFromScratchButton:hover, .goToHomeButton:hover{
     border: 4px solid #FFD700;
 }
 .guidedExperimentsSection, .startFromScratchSection{
@@ -176,9 +178,11 @@
     padding: 20px;
     width: 250px;
     text-align: center;
+    transition: transform 0.3s, border 0.3s;
 }
 .guidedExperimentsCard:hover{
     border: 4px solid #FFD700;
+    transform: scale(1.05);
 }
 .experimentTitle{
     font-size: 22px;
@@ -329,7 +333,13 @@
     border: none;
     border-radius: 12px;
     margin-bottom: 10px;
+    transition: transform 0.3s, border 0.3s;
 }
+
+.chemicalButton:hover{
+    transform: scale(1.05);
+}
+
 .chemicalImage{
     height: 60px;
     width: auto;
@@ -401,11 +411,11 @@
   border: none;
   cursor: pointer;
   font-size: 16px;
+  transition: transform 0.3s;
 }
 
-.fsButton:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+.fsButton:hover {
+  transform: scale(1.05);
 }
 
 .tableHint {
