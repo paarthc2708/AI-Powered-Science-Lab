@@ -185,6 +185,11 @@
     font-size: 16px;
     margin-bottom: 10px;
 }
+.experimentImage{
+    height: 150px;
+    width: auto;
+    margin-bottom: 10px;
+}
 .experimentDetails{
     font-size: 14px;
     margin-bottom: 15px;
@@ -306,9 +311,12 @@
     font-size: 20px;
     margin-bottom: 10px;
 }
+.virtualLabLeftPanelChemicals, .virtualLabLeftPanelApparatus{
+    text-align: center;
+}
 .chemicalButton{
     width: 45%;
-    height: auto;
+    height: 100px;
     cursor: pointer;
     font-size: 16px;
     font-family: "Playfair Display", serif;

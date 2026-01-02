@@ -71,21 +71,21 @@
                     <div class="guidedExperimentsCard">
                         <h3 class="experimentTitle">Acid-Base Titration</h3>
                         <p class="experimentDescription">Determine the concentration of an acid using a base.</p>
-                        <img src="" />
+                        <img src="Icons/AcidBaseTitrationReaction.png" class="experimentImage" />
                         <p class="experimentDetails"><i class="fa-solid fa-flask"></i>Beginner | <i class="fa-regular fa-clock"></i>5-7 minutes</p>
                         <button class="exploreExperimentButton" onclick="exploreTitrationExperiment()">View Experiment Details</button>
                     </div>
                     <div class="guidedExperimentsCard">
                         <h3 class="experimentTitle">Precipitation Reaction</h3>
                         <p class="experimentDescription">Observe formation of an insoluble salt.</p>
-                        <img src="" />
+                        <img src="Icons/PrecipitationReaction.png" class="experimentImage" />
                         <p class="experimentDetails"><i class="fa-solid fa-flask"></i>Beginner | <i class="fa-regular fa-clock"></i>3-5 minutes</p>
                         <button class="exploreExperimentButton" onclick="explorePrecipitationExperiment()">View Experiment Details</button>
                     </div>
                     <div class="guidedExperimentsCard">
                         <h3 class="experimentTitle">pH Indicator Experiment</h3>
                         <p class="experimentDescription">Identify acidic and basic solutions using indicators.</p>
-                        <img src="" />
+                        <img src="Icons/pHIndicatorExperiment.png" class="experimentImage" />
                         <p class="experimentDetails"><i class="fa-solid fa-flask"></i>Beginner | <i class="fa-regular fa-clock"></i>3 minutes</p>
                         <button class="exploreExperimentButton" onclick="explorePHExperiment()">View Experiment Details</button>
                     </div>
@@ -286,11 +286,13 @@
                     </div>
                 </div>
                 <div class="virtualLabCenterPanel">
-                    
+                    <div class="virtualLabCenterPanelTable" id="virtualLabCenterPanelTable">
+                        
+                    </div>
                 </div>
                 <div class="virtualLabRightPanel">
                     <h3 class="virtualLabPanelHeading">AI Assistant</h3>
-                    <div class="aiAssistantChatBox" id="aiAssistantChatBox">
+                    <div class="aiAssistantChatBox" id="titrationAiAssistantChatBox">
                         <div class="aiMessage">
                             <p>Hello! I'm your AI lab assistant. Let's get started with the titration experiment. Please add the acid to the conical flask first.</p>
                         </div>
@@ -299,8 +301,74 @@
             </div>
         </div>
         <div class="precipitationExperimentVirtualLab" id="precipitationExperimentVirtualLab">
+            <div class="virtualLabHeader">
+                <h2 class="virtualLabTitle">Precipitation Experiment</h2>
+                <a href="#" onclick="backToExperiments()" class="backToGuidedExperimentsLink"><i class="fa-solid fa-arrow-left"></i>Back to Experiments</a>
+            </div>
+            <div class="virtualLabMainArea" id="precipitationVirtualLabMainArea">
+                <div class="virtualLabLeftPanel">
+                    <div class="virtualLabLeftPanelChemicals">
+                        <h3 class="virtualLabPanelHeading">Chemicals</h3>
+                        <button class="chemicalButton" onclick="addSaltSolutionA()"><img src="Icons/SaltSolutionA.png" class="chemicalImage" /><br />Salt Solution A</button>
+                        <button class="chemicalButton" onclick="addSaltSolutionB()"><img src="Icons/SaltSolutionB.png" class="chemicalImage" /><br />Salt Solution B</button>
+                    </div>
+                    <div class="virtualLabLeftPanelApparatus">
+                        <h3 class="virtualLabPanelHeading">Apparatus</h3>
+                        <button class="chemicalButton" onclick="addTestTube()"><img src="Icons/TestTube.png" class="chemicalImage" /><br />Test Tube</button>
+                        <button class="chemicalButton" onclick="addTestTubeStand()"><img src="Icons/TestTubeStand.png" class="chemicalImage" /><br />Test Tube Stand</button>
+                        <button class="chemicalButton" onclick="addDropper()"><img src="Icons/Dropper.png" class="chemicalImage" /><br />Dropper</button>
+                        <button class="chemicalButton" onclick="addConicalFlask()"><img src="Icons/Conical Flask.png" class="chemicalImage" /><br />Conical Flask</button>
+                    </div>
+                </div>
+                <div class="virtualLabCenterPanel">
+                    <div class="virtualLabCenterPanelTable" id="virtualLabCenterPanelTable">
+                        
+                    </div>
+                </div>
+                <div class="virtualLabRightPanel">
+                    <h3 class="virtualLabPanelHeading">AI Assistant</h3>
+                    <div class="aiAssistantChatBox" id="precipitationAiAssistantChatBox">
+                        <div class="aiMessage">
+                            <p>Hello! I'm your AI lab assistant. Let's get started with the precipitation experiment. Please add the first salt solution to the conical flask.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="pHExperimentVirtualLab" id="pHExperimentVirtualLab">
+            <div class="virtualLabHeader">
+                <h2 class="virtualLabTitle">pH Indicator Experiment</h2>
+                <a href="#" onclick="backToExperiments()" class="backToGuidedExperimentsLink"><i class="fa-solid fa-arrow-left"></i>Back to Experiments</a>
+            </div>
+            <div class="virtualLabMainArea" id="pHExperimentVirtualLabMainArea">
+                <div class="virtualLabLeftPanel">
+                    <div class="virtualLabLeftPanelChemicals">
+                        <h3 class="virtualLabPanelHeading">Chemicals</h3>
+                        <button class="chemicalButton" onclick="addTestSolution()"><img src="Icons/TestSolution.png" class="chemicalImage" /><br />Test Solution</button>
+                        <button class="chemicalButton" onclick="addIndicator()"><img src="Icons/Indicator.png" class="chemicalImage" /><br />pH Indicator</button>
+                    </div>
+                    <div class="virtualLabLeftPanelApparatus">
+                        <h3 class="virtualLabPanelHeading">Apparatus</h3>
+                        <button class="chemicalButton" onclick="addTestTube()"><img src="Icons/TestTube.png" class="chemicalImage" /><br />Test Tube</button>
+                        <button class="chemicalButton" onclick="addTestTubeStand()"><img src="Icons/TestTubeStand.png" class="chemicalImage" /><br />Test Tube Stand</button>
+                        <button class="chemicalButton" onclick="addDropper()"><img src="Icons/Dropper.png" class="chemicalImage" /><br />Dropper</button>
+                        <button class="chemicalButton" onclick="addConicalFlask()"><img src="Icons/Conical Flask.png" class="chemicalImage" /><br />Conical Flask</button>
+                    </div>
+                </div>
+                <div class="virtualLabCenterPanel">
+                    <div class="virtualLabCenterPanelTable" id="virtualLabCenterPanelTable">
+                        
+                    </div>
+                </div>
+                <div class="virtualLabRightPanel">
+                    <h3 class="virtualLabPanelHeading">AI Assistant</h3>
+                    <div class="aiAssistantChatBox" id="pHAiAssistantChatBox">
+                        <div class="aiMessage">
+                            <p>Hello! I'm your AI lab assistant. Let's get started with the pH indicator experiment. Please add the test solution to the test tube.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="fromScratchSection" id="fromScratchSection">
 
