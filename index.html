@@ -61,6 +61,7 @@
                         <button class="startFromScratchButton" onclick="startFromScratch()">Start From Scratch</button>
                     </div>
                 </div>
+                <button class="goToHomeButton" onclick="goToHome()">← Back to Home</button>
             </div>
         </div>
         <div class="guidedExperimentsSection" id="guidedExperimentsSection">
@@ -90,6 +91,7 @@
                         <button class="exploreExperimentButton" onclick="explorePHExperiment()">View Experiment Details</button>
                     </div>
                 </div>
+                <button class="exploreExperimentButton" onclick="backToMenu()">← Back to Menu</button>
             </div>
         </div>
         <div id="titrationExperiment" class="titrationExperiment">
@@ -286,7 +288,7 @@
                     </div>
                 </div>
                 <div class="virtualLabCenterPanel">
-                    <div class="virtualLabCenterPanelTable" id="virtualLabCenterPanelTable">
+                    <div class="virtualLabCenterPanelTable" id="titrationTable">
                         
                     </div>
                 </div>
@@ -321,7 +323,7 @@
                     </div>
                 </div>
                 <div class="virtualLabCenterPanel">
-                    <div class="virtualLabCenterPanelTable" id="virtualLabCenterPanelTable">
+                    <div class="virtualLabCenterPanelTable" id="precipitationTable">
                         
                     </div>
                 </div>
@@ -356,7 +358,7 @@
                     </div>
                 </div>
                 <div class="virtualLabCenterPanel">
-                    <div class="virtualLabCenterPanelTable" id="virtualLabCenterPanelTable">
+                    <div class="virtualLabCenterPanelTable" id="pHTable">
                         
                     </div>
                 </div>
@@ -371,7 +373,51 @@
             </div>
         </div>
         <div class="fromScratchSection" id="fromScratchSection">
+            <div class="fromScratchHeader">
 
+                <h1 class="fromScratchHeading">Create Your Own Experiment</h1>
+                <p class="fromScratchDescription">
+                Explore chemistry freely by selecting chemicals and apparatus.  
+                The AI lab assistant will guide and explain every step.
+                <a href="#" onclick="backToMenu()" class="backToMenuLink"><i class="fa-solid fa-arrow-left"></i>Back to Menu</a>
+                </p>
+            </div>
+
+            <div class="fromScratchLab">
+
+                <!-- LEFT PANEL -->
+                <div class="fromScratchLeftPanel">
+
+                    <h3 class="panelHeading">Chemicals</h3>
+                    <button class="fsButton" id="acidBtn" onclick="addAcid()">Acid</button>
+                    <button class="fsButton" id="baseBtn" onclick="addBase()">Base</button>
+                    <button class="fsButton" id="indicatorBtn" onclick="addIndicator()">Indicator</button>
+                    <button class="fsButton" id="testSolutionBtn" onclick="addTestSolution()">Test Solution</button>
+                    <button class="fsButton" id="saltABtn" onclick="addSaltSolutionA()">Salt Solution A</button>
+                    <button class="fsButton" id="saltBBtn" onclick="addSaltSolutionB()">Salt Solution B</button>
+
+                    <h3 class="panelHeading">Apparatus</h3>
+                    <button class="fsButton" onclick="addTestTube()">Test Tube</button>
+                    <button class="fsButton" onclick="addBeaker()">Beaker</button>
+                    <button class="fsButton" onclick="addDropper()">Dropper</button>
+                    <button class="fsButton" onclick="addBurette()">Burette</button>
+                    <button class="fsButton" onclick="addConicalFlask()">Conical Flask</button>
+
+                </div>
+
+                    <!-- CENTER PANEL -->
+                <div class="fromScratchCenterPanel" id="fromScratchTable">
+
+                </div>
+
+                    <!-- RIGHT PANEL -->
+                <div class="fromScratchRightPanel">
+                    <h3 class="panelHeading">AI Lab Assistant</h3>
+                    <div class="aiBox" id="fromScratchAI">
+                        <p>Hello! Start by adding a solution or choosing an apparatus.</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <script src="https://kit.fontawesome.com/1d3d3c5b95.js" crossorigin="anonymous"></script>
         <script src="sectionHiding.js"></script>

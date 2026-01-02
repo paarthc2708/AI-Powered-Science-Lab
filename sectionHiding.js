@@ -21,6 +21,7 @@ function startGuidedExperiments(){
 
 function startFromScratch(){
     experimentsSection.style.display = "none";
+    guidedExperimentsSection.style.display = "none";
     fromScratchSection.style.display = "block";
 }
 
@@ -54,6 +55,11 @@ function startPHExperiment(){
     pHExperimentVirtualLab.style.display = "block";
 }
 
+function goToHome(){
+    experimentsSection.style.display = "none";
+    welcomePage.style.display = "block";
+}
+
 function backToExperiments(){
     titrationExperiment.style.display = "none";
     precipitationExperiment.style.display = "none";
@@ -62,4 +68,10 @@ function backToExperiments(){
     precipitationExperimentVirtualLab.style.display = "none";
     pHExperimentVirtualLab.style.display = "none";
     guidedExperimentsSection.style.display = "block";
+}
+
+function backToMenu(){
+    guidedExperimentsSection.style.display = "none";
+    fromScratchSection.style.display = "none";
+    experimentsSection.style.display = "block";
 }

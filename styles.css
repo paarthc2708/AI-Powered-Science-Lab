@@ -1,7 +1,8 @@
 .welcomePageCard{
     background-image: URL("BackgroundImage.png");
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -96,7 +97,7 @@
     justify-content: center;
     gap: 50px;
 }
-.guidedExperiments, .startFromScratch{
+.guidedExperiments, .startFromScratch, .goToHomeButton{
     border: 2px solid white;
     background-color: rgb(101, 101, 101);
     opacity: 90%;
@@ -104,8 +105,9 @@
     padding: 20px;
     width: 300px;
     text-align: center;
+    margin: 15px 0;
 }
-.guidedExperiments:hover, .startFromScratch:hover{
+.guidedExperiments:hover, .startFromScratch:hover, .goToHomeButton:hover{
     border: 4px solid #FFD700;
 }
 .guidedExperimentsHeading, .startFromScratchHeading{
@@ -135,7 +137,8 @@
 .guidedExperimentsSection{
     background-image: URL("BackgroundImage.png");
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     width: 100%;
     color: white;
     font-family: "Playfair Display", serif;
@@ -204,6 +207,7 @@
     color: black;
     border: none;
     border-radius: 12px;
+    margin: 10px 0px;
 }
 .exploreExperimentButton:hover{
     border: 4px solid #FFD700;
@@ -336,4 +340,99 @@
     background-size: cover;
     height: 80vh;
     width: 100%;
+}
+.fromScratchSection {
+  display: none;
+  min-height: 100vh;
+  background-image: url("BackgroundImage.png");
+  background-size: cover;
+  font-family: "Playfair Display", serif;
+  color: white;
+}
+
+.fromScratchContent {
+  padding: 30px;
+  text-align: center;
+}
+
+.fromScratchHeading {
+  font-size: 32px;
+}
+
+.fromScratchDescription {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.fromScratchLab {
+  display: flex;
+  gap: 15px;
+  height: 70vh;
+}
+
+.fromScratchLeftPanel,
+.fromScratchRightPanel {
+  width: 25%;
+  background: lightgrey;
+  border-radius: 12px;
+  padding: 10px;
+  color: black;
+  overflow-y: auto;
+}
+
+.fromScratchCenterPanel {
+  width: 50%;
+  background-image: url("VirtualLabTableImage.png");
+  background-size: cover;
+  border-radius: 12px;
+  position: relative;
+}
+
+.panelHeading {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.fsButton {
+  width: 90%;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.fsButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.tableHint {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+}
+
+.aiBox {
+  background: white;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  height: 60vh;
+  overflow-y: auto;
+}
+
+.backButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.backButton:hover {
+  border: 4px solid #FFD700;
 }
