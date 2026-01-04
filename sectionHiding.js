@@ -23,6 +23,7 @@ function startFromScratch(){
     experimentsSection.style.display = "none";
     guidedExperimentsSection.style.display = "none";
     fromScratchSection.style.display = "block";
+    activeExperiment = "fromScratch";
 }
 
 function exploreTitrationExperiment(){
@@ -43,16 +44,20 @@ function explorePHExperiment(){
 function startTitrationExperiment(){
     titrationExperiment.style.display = "none";
     titrationExperimentVirtualLab.style.display = "block";
+    activeExperiment = "titration";
+
 }
 
 function startPrecipitationExperiment(){
     precipitationExperiment.style.display = "none";
     precipitationExperimentVirtualLab.style.display = "block";
+    activeExperiment = "precipitation";
 }
 
 function startPHExperiment(){
     pHExperiment.style.display = "none";
     pHExperimentVirtualLab.style.display = "block";
+    activeExperiment = "pH";
 }
 
 function goToHome(){

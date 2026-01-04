@@ -664,4 +664,119 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-console.log("Virtual Lab Loaded!");
+/************************************************************
+ * AI ENHANCEMENT LAYER (VISUAL-SAFE)
+ * Does NOT touch any visual / animation logic
+ ************************************************************/
+
+/* ---------- GLOBAL AI CONTEXT ---------- */
+let activeExperiment = null;
+
+/* ---------- SET CONTEXT (called on lab open) ---------- */
+function setActiveExperiment(exp) {
+    activeExperiment = exp;
+}
+
+/* ---------- CHATBOX RESOLVER ---------- */
+function getAIChatBox() {
+    switch (activeExperiment) {
+        case "titration":
+            return document.getElementById("titrationAiAssistantChatBox");
+        case "precipitation":
+            return document.getElementById("precipitationAiAssistantChatBox");
+        case "pH":
+            return document.getElementById("pHAiAssistantChatBox");
+        case "fromScratch":
+            return document.getElementById("fromScratchAI");
+        default:
+            return null;
+    }
+}
+
+/* ---------- CONVERSATION MEMORY ---------- */
+const aiMemory = {
+    titration: [],
+    precipitation: [],
+    pH: [],
+    fromScratch: []
+};
+
+/* ---------- AI RESPONSE ENGINE ---------- */
+function generateAIResponse(action) {
+    const rules = {
+        titration: {
+            acid: "Good. Acid is taken in the conical flask before titration.",
+            indicator: "Indicator helps us visually detect the endpoint.",
+            base: "Base is added from the burette slowly during titration.",
+            start: "Observe carefully. The endpoint is near when the color persists.",
+            repeat: "This step has already been performed.",
+            wrong: "That step is out of sequence in titration."
+        },
+        precipitation: {
+            saltA: "First salt solution provides one set of ions.",
+            saltB: "Good. The second solution causes an insoluble precipitate.",
+            wrong: "Ensure the test tube and first solution are present."
+        },
+        pH: {
+            solution: "Test solution added. Now use an indicator.",
+            indicator: "Color change helps determine acidic or basic nature.",
+            wrong: "Indicator is used only after adding the test solution."
+        },
+        fromScratch: {
+            default: "Think about the reaction you want to observe and proceed carefully."
+        }
+    };
+
+    const expRules = rules[activeExperiment];
+    if (!expRules) return "Proceed carefully.";
+
+    if (action.includes("acid")) return expRules.acid || expRules.wrong;
+    if (action.includes("indicator")) return expRules.indicator || expRules.wrong;
+    if (action.includes("base")) return expRules.base || expRules.wrong;
+    if (action.includes("salt")) return expRules.saltB || expRules.saltA;
+    if (action.includes("start")) return expRules.start;
+
+    return expRules.default || expRules.wrong;
+}
+
+/* ---------- MAIN AI ENTRY POINT ---------- */
+/* ❗ Function name UNCHANGED */
+async function sendMessageToAI(userAction) {
+    const chatBox = getAIChatBox();
+    if (!chatBox) return;
+
+    // thinking indicator
+    const thinking = document.createElement("div");
+    thinking.className = "aiMessage thinking";
+    thinking.innerHTML = "<p>Thinking...</p>";
+    chatBox.appendChild(thinking);
+    chatBox.scrollTop = chatBox.scrollHeight;
+
+    aiMemory[activeExperiment].push({
+        role: "user",
+        content: userAction
+    });
+
+    // simulate AI delay (OpenAI ready)
+    setTimeout(() => {
+        thinking.remove();
+
+        const reply = generateAIResponse(userAction);
+
+        const msg = document.createElement("div");
+        msg.className = "aiMessage";
+        msg.innerHTML = `<p>${reply}</p>`;
+        chatBox.appendChild(msg);
+        chatBox.scrollTop = chatBox.scrollHeight;
+
+        aiMemory[activeExperiment].push({
+            role: "assistant",
+            content: reply
+        });
+    }, 600);
+}
+
+/************************************************************
+ * END OF AI LAYER
+ * All visual & animation functions remain UNTOUCHED
+ ************************************************************/

@@ -447,3 +447,133 @@
 .backButton:hover {
   border: 4px solid #FFD700;
 }
+
+@media (max-width: 768px) {
+
+  .welcomePageMainHeading {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .welcomePageSubHeading {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .advantages {
+    grid-template-columns: 1fr;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .advantage, .step {
+    width: 95%;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .differentWays {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .guidedExperiments,
+  .startFromScratch {
+    width: 90%;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .guidedExperimentsCards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .guidedExperimentsCard {
+    width: 90%;
+  }
+
+  .guidedExperimentsContentDescription {
+    width: 90%;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .titrationExperimentCard,
+  .precipitationExperimentCard,
+  .pHExperimentCard {
+    width: 95%;
+  }
+
+  .titrationExperimentCardSubtitles,
+  .precipitationExperimentCardSubtitles,
+  .pHExperimentCardSubtitles {
+    flex-direction: column;
+  }
+
+  .titrationExperimentCardSubtitle,
+  .precipitationExperimentCardSubtitle,
+  .pHExperimentCardSubtitle {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .virtualLabMainArea {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .virtualLabLeftPanel,
+  .virtualLabCenterPanel,
+  .virtualLabRightPanel {
+    width: 100%;
+    height: auto;
+  }
+
+  .virtualLabCenterPanel {
+    min-height: 300px;
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .fromScratchLab {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .fromScratchLeftPanel,
+  .fromScratchCenterPanel,
+  .fromScratchRightPanel {
+    width: 100%;
+  }
+
+  .fromScratchCenterPanel {
+    min-height: 300px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  button {
+    font-size: 16px;
+  }
+
+  .chemicalButton {
+    width: 90%;
+  }
+
+}
